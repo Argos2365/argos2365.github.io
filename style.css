@@ -8,7 +8,7 @@ body {
 }
 
 a:link, a:visited {
-	color: white;
+    color: white;
     display: grid;
     place-items: center;
     align-content: center;
