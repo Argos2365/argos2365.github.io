@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 
-a:link, a:visited {
+a {
     color: white;
     display: grid;
     place-items: center;
