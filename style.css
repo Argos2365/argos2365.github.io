@@ -1,3 +1,4 @@
+
 body {
     background-color: #131316;
     color: #ffffff;
@@ -6,7 +7,8 @@ body {
     margin: 0;
 }
 
-a {
+a:link, a:visited {
+	color: white;
     display: grid;
     place-items: center;
     align-content: center;
