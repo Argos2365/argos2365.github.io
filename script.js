@@ -1,4 +1,6 @@
 
+console.log("Hello World")
+
 const obserber = new IntersectionObserver((entries) => {
 
     entries.forEach((entry) => {
