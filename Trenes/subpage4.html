@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        #map {
+            width: 1037px;
+            height: 541px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="data/Nuevacapaborrador_0.js"></script>
+        <script src="data/Amrica_1.js"></script>
+        <script src="data/Pas_2.js"></script>
+        <script src="data/Provincia_3.js"></script>
+        <script src="data/Ferrocarril_4.js"></script>
+        <script src="data/Ciudades_5.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[-56.37783636843807,-96.76103975744442],[-20.49933272273427,-27.866324964673684]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+            map.setMaxBounds(map.getBounds());
+        }
+        function pop_Nuevacapaborrador_0(feature, layer) {
+        }
+
+        function style_Nuevacapaborrador_0_0() {
+            return {
+                pane: 'pane_Nuevacapaborrador_0',
+                opacity: 1,
+                color: 'rgba(100,152,210,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(165,191,221,1.0)',
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Nuevacapaborrador_0');
+        map.getPane('pane_Nuevacapaborrador_0').style.zIndex = 400;
+        map.getPane('pane_Nuevacapaborrador_0').style['mix-blend-mode'] = 'normal';
+        var layer_Nuevacapaborrador_0 = new L.geoJson(json_Nuevacapaborrador_0, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Nuevacapaborrador_0',
+            layerName: 'layer_Nuevacapaborrador_0',
+            pane: 'pane_Nuevacapaborrador_0',
+            onEachFeature: pop_Nuevacapaborrador_0,
+            style: style_Nuevacapaborrador_0_0,
+        });
+        bounds_group.addLayer(layer_Nuevacapaborrador_0);
+        map.addLayer(layer_Nuevacapaborrador_0);
+        function pop_Amrica_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['PAÍS'] !== null ? autolinker.link(feature.properties['PAÍS'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Amrica_1_0() {
+            return {
+                pane: 'pane_Amrica_1',
+                opacity: 1,
+                color: 'rgba(138,138,138,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,0,0,1.0)',
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Amrica_1');
+        map.getPane('pane_Amrica_1').style.zIndex = 401;
+        map.getPane('pane_Amrica_1').style['mix-blend-mode'] = 'normal';
+        var layer_Amrica_1 = new L.geoJson(json_Amrica_1, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Amrica_1',
+            layerName: 'layer_Amrica_1',
+            pane: 'pane_Amrica_1',
+            onEachFeature: pop_Amrica_1,
+            style: style_Amrica_1_0,
+        });
+        bounds_group.addLayer(layer_Amrica_1);
+        map.addLayer(layer_Amrica_1);
+        function pop_Pas_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['gid'] !== null ? autolinker.link(feature.properties['gid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['entidad'] !== null ? autolinker.link(feature.properties['entidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['objeto'] !== null ? autolinker.link(feature.properties['objeto'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fna'] !== null ? autolinker.link(feature.properties['fna'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['gna'] !== null ? autolinker.link(feature.properties['gna'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nam'] !== null ? autolinker.link(feature.properties['nam'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fdc'] !== null ? autolinker.link(feature.properties['fdc'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['sag'] !== null ? autolinker.link(feature.properties['sag'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Pas_2_0() {
+            return {
+                pane: 'pane_Pas_2',
+                opacity: 1,
+                color: 'rgba(138,138,138,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,0,0,1.0)',
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Pas_2');
+        map.getPane('pane_Pas_2').style.zIndex = 402;
+        map.getPane('pane_Pas_2').style['mix-blend-mode'] = 'normal';
+        var layer_Pas_2 = new L.geoJson(json_Pas_2, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Pas_2',
+            layerName: 'layer_Pas_2',
+            pane: 'pane_Pas_2',
+            onEachFeature: pop_Pas_2,
+            style: style_Pas_2_0,
+        });
+        bounds_group.addLayer(layer_Pas_2);
+        map.addLayer(layer_Pas_2);
+        function pop_Provincia_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['gid'] !== null ? autolinker.link(feature.properties['gid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['entidad'] !== null ? autolinker.link(feature.properties['entidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['objeto'] !== null ? autolinker.link(feature.properties['objeto'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fna'] !== null ? autolinker.link(feature.properties['fna'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['gna'] !== null ? autolinker.link(feature.properties['gna'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nam'] !== null ? autolinker.link(feature.properties['nam'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['in1'] !== null ? autolinker.link(feature.properties['in1'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fdc'] !== null ? autolinker.link(feature.properties['fdc'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['sag'] !== null ? autolinker.link(feature.properties['sag'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Provincia_3_0() {
+            return {
+                pane: 'pane_Provincia_3',
+                opacity: 1,
+                color: 'rgba(47,47,47,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,0,0,1.0)',
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Provincia_3');
+        map.getPane('pane_Provincia_3').style.zIndex = 403;
+        map.getPane('pane_Provincia_3').style['mix-blend-mode'] = 'normal';
+        var layer_Provincia_3 = new L.geoJson(json_Provincia_3, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Provincia_3',
+            layerName: 'layer_Provincia_3',
+            pane: 'pane_Provincia_3',
+            onEachFeature: pop_Provincia_3,
+            style: style_Provincia_3_0,
+        });
+        bounds_group.addLayer(layer_Provincia_3);
+        map.addLayer(layer_Provincia_3);
+        function pop_Ferrocarril_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['gid'] !== null ? autolinker.link(feature.properties['gid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['entidad'] !== null ? autolinker.link(feature.properties['entidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['objeto'] !== null ? autolinker.link(feature.properties['objeto'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fna'] !== null ? autolinker.link(feature.properties['fna'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['gna'] !== null ? autolinker.link(feature.properties['gna'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nam'] !== null ? autolinker.link(feature.properties['nam'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fun'] !== null ? autolinker.link(feature.properties['fun'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['rgc'] !== null ? autolinker.link(feature.properties['rgc'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['ltn'] !== null ? autolinker.link(feature.properties['ltn'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['loc'] !== null ? autolinker.link(feature.properties['loc'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fdc'] !== null ? autolinker.link(feature.properties['fdc'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['sag'] !== null ? autolinker.link(feature.properties['sag'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Ferrocarril_4_0() {
+            return {
+                pane: 'pane_Ferrocarril_4',
+                opacity: 1,
+                color: 'rgba(255,255,255,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Ferrocarril_4');
+        map.getPane('pane_Ferrocarril_4').style.zIndex = 404;
+        map.getPane('pane_Ferrocarril_4').style['mix-blend-mode'] = 'normal';
+        var layer_Ferrocarril_4 = new L.geoJson(json_Ferrocarril_4, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Ferrocarril_4',
+            layerName: 'layer_Ferrocarril_4',
+            pane: 'pane_Ferrocarril_4',
+            onEachFeature: pop_Ferrocarril_4,
+            style: style_Ferrocarril_4_0,
+        });
+        bounds_group.addLayer(layer_Ferrocarril_4);
+        map.addLayer(layer_Ferrocarril_4);
+        function pop_Ciudades_5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Nombre</strong><br />' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Ciudades_5_0() {
+            return {
+                pane: 'pane_Ciudades_5',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,255,255,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Ciudades_5');
+        map.getPane('pane_Ciudades_5').style.zIndex = 405;
+        map.getPane('pane_Ciudades_5').style['mix-blend-mode'] = 'normal';
+        var layer_Ciudades_5 = new L.geoJson(json_Ciudades_5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Ciudades_5',
+            layerName: 'layer_Ciudades_5',
+            pane: 'pane_Ciudades_5',
+            onEachFeature: pop_Ciudades_5,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_Ciudades_5_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Ciudades_5);
+        map.addLayer(layer_Ciudades_5);L.control.scale({position: 'bottomleft', maxWidth: 100, metric: true, imperial: false, updateWhenIdle: false}).addTo(map);
+        setBounds();
+        resetLabels([layer_Ciudades_5]);
+        map.on("zoomend", function(){
+            resetLabels([layer_Ciudades_5]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_Ciudades_5]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_Ciudades_5]);
+        });
+        </script>
+    </body>
+</html>
