@@ -6,7 +6,8 @@ html {
 }
 
 .texto {
-    height: 1500px;
+    /*height: 1500px;*/
+    display: inline-block;
     font-size: xx-large;
     color: azure;
     background: #0f2027; /* fallback for old browsers */
