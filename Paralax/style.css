@@ -1,0 +1,83 @@
+body,
+html {
+    height: 100%;
+}
+
+.texto {
+    height: 1500px;
+    font-size: xx-large;
+    color: azure;
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.paralax1 {
+    /* The image used */
+    background-image: url('Cursos\ de\ agua\ Del\ Departamento\ De\ Antofagasta\ De\ La\ Sierra.png');
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paralax2 {
+    /* The image used */
+    background-image: url('Densidad\ poblacional\ por\ Departamentos.png');
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paralax3 {
+    /* The image used */
+    background-image: url('Explotacion\ de\ Litio\ en\ relacion\ a\ las\ Comunidades\ Originarias..png');
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paralax4 {
+    /* The image used */
+    background-image: url('Mapa\ de\ Localizacion.png');
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paralax5 {
+    /* The image used */
+    background-image: url('Salar\ segun\ actividad\ relacionada\ al\ litio.png');
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
