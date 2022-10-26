@@ -2,6 +2,7 @@ body,
 html {
     height: 100%;
     width: 100%;
+    overflow: auto;
 }
 
 .texto {
@@ -17,7 +18,6 @@ html {
     /* The image used */
     background-image: url('Cursos\ de\ agua\ Del\ Departamento\ De\ Antofagasta\ De\ La\ Sierra.png');
 
-    /* Full height */
     height: 100%;
 
     /* Create the parallax scrolling effect */
@@ -25,6 +25,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .paralax2 {
