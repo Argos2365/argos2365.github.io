@@ -18,13 +18,14 @@ html {
     /* The image used */
     background-image: url('Cursos\ de\ agua\ Del\ Departamento\ De\ Antofagasta\ De\ La\ Sierra.png');
 
-    height: 100%;
+    height: 0;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: center;
+    background-position: 0 0;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    padding-top: 46.79%;
 
 }
 
