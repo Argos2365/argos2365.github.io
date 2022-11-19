@@ -21,6 +21,7 @@
     <body>
         <div id="map">
         </div>
+        
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/leaflet-svg-shape-markers.min.js"></script>
@@ -31,6 +32,7 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
+        <script src="js/leaflet.js/L.Path.Drag.js"></script>
         <script src="data/ZeldaLocationsLocations_0.js"></script>
         <script src="data/SecratsandDungeosLocations_1.js"></script>
         <script src="data/Sidequest_2.js"></script>
@@ -159,6 +161,7 @@
                 fillOpacity: 1,
                 fillColor: 'rgba(255,127,0,1.0)',
                 interactive: false,
+                polygon.dragging.enable();
             }
                     break;
                 case 'Gerudo Valley':
