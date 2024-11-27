@@ -1,6 +1,6 @@
-
+Body {Background – color : #00adef ;}
         #map {
-            background-color: #daf0ef
+            background-color: #00adef
         }
         html, body, #map {
 			overflow: hidden;
@@ -24,7 +24,7 @@
             margin: 0 0 5px;
         }
         .leaflet-container {
-            background: #fff;
+            background: #00adef;
             padding-right: 10px;
         }
         .leaflet-popup-scrolled {
