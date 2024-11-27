@@ -1,11 +1,9 @@
-	body {
-	    background–color: #00adef
-	}
         #map {
             background-color: #00adef
         }
         html, body, #map {
 			overflow: hidden;
+		background–color: #00adef;
         }
         .col9{
 			height: 100%!important;
