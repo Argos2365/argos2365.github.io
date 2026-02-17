@@ -1,130 +1,90 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <title>Mapas</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartografia - Julian Gonzalez Gomez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!--
-    	<a class="hidden" href="./Zelda/subpage.html">Mapa Zelda</a>
-        <a class="hidden" href="./Pollajerias/subpage2.html">Mapa Pollajerias</a>
-        <a class="hidden" href="./LOLwc/subpage3.html">Mapa Campeones del Mundo LOL</a>
-        -->
-  <div class="hidden">
-    <div class="container">   
-      <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>01</h2>
-            <h3>Hospitales Publicos</h3>
-            <p>Hospitales Publicos</p>
-            <a href="./Mapa de Hospitales Publicos La Jauretche/Hospitales_Publicos.html">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>02</h2>
-            <h3>Mundial De Qatar 2022</h3>
-            <p>Diversa informacion Georeferenciada sobre el mundial y sus problematicas</p>
-            <a href="./Qatar22/subpage7.html">Read More</a>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>03</h2>
-            <h3>Extraccion de Litio en Catamarca</h3>
-            <p>Trabajo de Investigacion sobre la extraccion Minera en el Departamento de Antofagasta de La Sierra</p>
-            <a href="./Paralax/subpage5.html">Read More</a>
-          </div>
-        </div>
-      </div> 
-      <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>04</h2>
-            <h3>La Plata: Ciudad de las Diagonales</h3>
-            <p>Diversa infromacion Georeferenciada sobre la Ciudad De La Plata</p>
-            <a href="./laplata/subpage2.html">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>05</h2>
-            <h3>Mapa Zelda</h3>
-            <p>Mapa General del juego The Legends of Zelda : Ocarina of Time</p>
-            <a href="./Zelda/subpage.html">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>06</h2>
-            <h3>Campeonatos De LoL</h3>
-            <p>Campeones del Mundo del League of Legends en sus respectivas cedes</p>
-            <a href="./LOLwc/subpage3.html">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>07</h2>
-            <h3>Grieta Interactiva</h3>
-            <p>¿Cuanta Vida tiene un campamento?¿Cuanta EXP? Aqui todas las respuestas</p>
-            <a href="./Summoners Rift/subpage4.html">Read More</a>
-          </div>
-        </div>
-      </div>  
-      <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>08</h2>
-            <h3>Atlas del Futbol Argentinoo</h3>
-            <p>Estadios de los clubes Del Futbol Argentino</p>
-            <a href="./Atlas Futbol Argentino/subpage8.html">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>09</h2>
-            <h3>Librerias</h3>
-            <p>Mapa interactivo de Librerias Platenses</p>
-            <a href="./LibreriasLP/index.html">Ver Mapa</a>
-          </div>
-        </div>
-      </div>
-     <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>10</h2>
-            <h3>Rusia-Ukrania</h3>
-            <p>Cartografia tematica sobre el conflicto</p>
-            <a href="./GuerraRusUkr/index.html">Ver Mapas</a>
-          </div>
-        </div>
-      </div>
+
+<header class="main-header">
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="" onerror="this.style.display='none'">
+            <span>Mapas</span>
+        </a>
+        <button class="menu-toggle-btn" onclick="toggleMenu()">☰</button>
     </div>
-  </div>
-  <script defer src="script.js"></script>
- 
+</header>
 
+<nav id="side-menu" class="side-menu">
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <div class="menu-content">
+        <span class="tag" style="color: var(--orange3);">NAVEGACIÓN</span>
+        <a href="index.html">Inicio</a>
+        <a href="_blank">Menu 2</a>
+        <a href="_blank">Menu 3</a>
+        <a href="_blank">Menu 4</a>
+        <a href="_blank">Menu 5</a>
+    </div>
+</nav>
+
+<main class="grid-container">
+
+      <a href="./mapas/HospitalesLJ/Hospitales_Publicos.html" class="card bg-blue" style="--bg-image: url('images/hospitales.jpg');">
+        <h2>Hospitales Publicos<h2>
+        <h2 style="text-align: auto;">Consegui tu apto fisico</h2>
+        <span class="btn-action" style="text-align: center;">Ver</span>
+    </a>
+    
+    <a href="./mapas/AtlasFutArg/subpage8.html" class="card bg-blue" style="--bg-image: url('images/futbol.jpg');">
+        <h2>Atlas del Futbol Argentino</h2>
+        <h2>Novedades</h2>
+        <span class="btn-action">Ver</span>
+    </a>
+
+    <a href="./mapas/GuerraRusUkr/index.html" class="card bg-green" style="--bg-image: url('images/rusuk.jpg');">
+        <h2>Guerra Rusia - Ukrania</h2>
+        <h2>Cartografia Belica</h2>
+        <span class="btn-action" style="text-align: center;" >Ver</span>
+    </a>
+
+    <a href="./mapas/laplata/subpage2.html" class="card bg-green" style="--bg-image: url('images/hospitales.jpg');">
+        <h2>La Plata</h2>
+        <h2>Cartografia Platense</h2>
+        <span class="btn-action" style="text-align: center;">Ver</span>
+    </a>
+
+    <a href="./mapas/LibreriasLP\index.html" class="card bg-blue" style="--bg-image: url('images/librerias.jpg');">
+        <h2>Librerias Platenses</h2>
+        <span class="btn-action">Ver</span>
+    </a>
+
+    <a href="./mapas/Paralax/subpage5.html" class="card bg-blue" style="--bg-image: url('images/catamarca.jpg');">
+        <h2>Catamarca</h2>
+        <h2>Extraccion de Litio</h2>
+        <span class="btn-action" style="text-align: center;" >Ver</span>
+    </a>
+
+    <a href="./mapas/Qatar22/subpage7.html" class="card bg-green" style="--bg-image: url('images/mundial2022.webp');">
+        <h2>QATAR 2022<h2>
+        <h2 style="text-align: auto;">Cartografia Mundialista</h2>
+        <span class="btn-action" style="text-align: center;">Ver</span>
+    </a>
+
+    <a href="./mapas/lolmap/subpage4.html" class="card bg-green" style="--bg-image: url('images/league.jpg');">
+        <h2>Grieta del Invocador</h2>
+        <h2>Mapa de juego</h2>
+        <span class="btn-action" style="text-align: center;">Ver</span>
+    </a>    
+</main>
+
+<footer class="main-footer">
+    <p>La Fuente<br><br>Informáticos para la Patria</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
