@@ -1,62 +1,163 @@
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        
-        <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;700&display=swap" rel="stylesheet">
-        
-        <link rel="stylesheet" href="./resources/ol.css">
-        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
-        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
-        <link rel="stylesheet" href="./resources/qgis2web.css">
-        
-        <style>
-        html, body {
-            background-color: #ffffff;
+<!call-to-action>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <title>Cartografía Temática: Rusia - Ucrania</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/ol.css">
+    <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+    <link rel="stylesheet" href="resources/photon-geocoder-autocomplete.min.css">
+    <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+    <link rel="stylesheet" href="./resources/qgis2web.css">
+    
+    <style>
+        :root {
+            --primary-color: #4B5320; /* Verde Olivo */
+            --text-light: #ffffff;
+            --bg-color: #f4f4f4;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Evita scrolls innecesarios */
+            color: #333;
+            line-height: 1.6;
         }
 
         header {
             width: 100%;
-            background-color: #4B5320;
-            padding: 15px 0;
+            background-color: var(--primary-color);
+            padding: 20px 0;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         header h1 {
             font-family: 'Yanone Kaffeesatz', sans-serif;
-            color: #ffffff;
+            color: var(--text-light);
             margin: 0;
-            font-size: 40px;
+            font-size: 3rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
-        </style>
-        <title>Rusia - Ukrania</title>
-    </head>
-    <body>
-        <header>
-            <h1>CARTOGRAFIA TEMATICA</h1>
-        </header>
-        <h2>Regiones Geopoliticas segun Mckinder</h2>
-        <img src="mapa1.png" class="w3-border w3-padding" alt="Mapa 1" style="width:100%;max-width:400px">
-        <img src="mapa2.jpeg" class="w3-border w3-padding" alt="Norway" style="width:100%;max-width:400px">
-        
-        <h2>Division Politica Rusa</h2>
-        <img src="mapa1.png" class="w3-border w3-padding" alt="Norway" style="width:100%;max-width:400px">
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
 
-        <h2>Division Politica Ukraniana</h2>
-        <img src="mapa1.png" class="w3-border w3-padding" alt="Norway" style="width:100%;max-width:400px">
+        section {
+            background: var(--card-bg);
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
 
+        h2 {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            color: var(--primary-color);
+            font-size: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            transition: transform 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Ajustes para móviles */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            section { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cartografía Temática</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Regiones Geopolíticas según Mackinder</h2>
+            <div class="gallery">
+                <div class="map-container">
+                    <img src="mapa1.png" alt="Mapa Geopolítico 1">
+                </div>
+                <div class="map-container">
+                    <img src="mapa2.jpeg" alt="Mapa Geopolítico 2">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>División Política Rusa</h2>
+            <div class="map-container">
+                <img src="mapa1.png" alt="División Política de Rusia">
+            </div>
+        </section>
+
+        <section>
+            <h2>División Política Ucraniana</h2>
+            <div class="map-container">
+                <img src="mapa1.png" alt="División Política de Ucrania">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Análisis Geopolítico</p>
+    </footer>
+
+</body>
 </html>
-
